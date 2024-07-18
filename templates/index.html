@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<center>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Price Prediction</title>
+</head>
+<body>
+    <h1>Car Price Prediction</h1>
+    <form action="/predict" method="post">
+        <label for="Levy">Levy:</label>
+        <input type="text" id="Levy" name="Levy" required><br>
+
+        <label for="Manufacturer">Manufacturer:</label>
+        <input type="text" id="Manufacturer" name="Manufacturer" required><br>
+
+        <label for="Model">Model:</label>
+        <input type="text" id="Model" name="Model" required><br>
+
+        <label for="Prod_year">Prod. year:</label>
+        <input type="text" id="Prod_year" name="Prod. year" required><br>
+
+        <label for="Category">Category:</label>
+        <input type="text" id="Category" name="Category" required><br>
+
+        <label for="Leather_interior">Leather interior:</label>
+        <input type="text" id="Leather_interior" name="Leather interior" required><br>
+
+        <label for="Fuel_type">Fuel type:</label>
+        <input type="text" id="Fuel_type" name="Fuel type" required><br>
+
+        <label for="Engine_volume">Engine volume:</label>
+        <input type="text" id="Engine_volume" name="Engine volume" required><br>
+
+        <label for="Mileage">Mileage:</label>
+        <input type="text" id="Mileage" name="Mileage" required><br>
+
+        <label for="Cylinders">Cylinders:</label>
+        <input type="text" id="Cylinders" name="Cylinders" required><br>
+
+        <label for="Gear_box_type">Gear box type:</label>
+        <input type="text" id="Gear_box_type" name="Gear box type" required><br>
+
+        <label for="Drive_wheels">Drive wheels:</label>
+        <input type="text" id="Drive_wheels" name="Drive wheels" required><br>
+
+        <label for="Doors">Doors:</label>
+        <input type="text" id="Doors" name="Doors" required><br>
+
+        <label for="Wheel">Wheel:</label>
+        <input type="text" id="Wheel" name="Wheel" required><br>
+
+        <label for="Color">Color:</label>
+        <input type="text" id="Color" name="Color" required><br>
+
+        <label for="Airbags">Airbags:</label>
+        <input type="text" id="Airbags" name="Airbags" required><br>
+
+        <input type="submit" value="Predict">
+    </form>
+
+    {% if prediction %}
+    <h2>Predicted Price: ${{ prediction }}</h2>
+    {% endif %}
+</body>
+</html>
